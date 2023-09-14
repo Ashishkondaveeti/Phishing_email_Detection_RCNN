@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Email Detection</title>
+</head>
+<body>
+    <h1>Phishing Email Detection</h1>
+    <form id="emailForm" action="/predict" method="post">
+        <label for="emailContent">Enter Email Content:</label><br>
+        <textarea id="emailContent" name="emailContent" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">Predict</button>
+    </form>
+    <div id="predictionResult">
+        {% if prediction %}
+            <p>Prediction: {{ prediction }}</p>
+            <p>Phishing Probability: {{ phishing_probability }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
