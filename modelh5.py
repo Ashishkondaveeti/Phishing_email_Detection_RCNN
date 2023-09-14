@@ -45,7 +45,7 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 
 # Train the model
 batch_size = 32
-epochs = 5
+epochs = 50
 model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs, validation_split=0.1)
 
 # Evaluate the model on the testing data
